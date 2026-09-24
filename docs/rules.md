@@ -5,4 +5,4 @@
 3. New branch will be created for each new Issue.
 4. When a pull request is accepted, the branch used for working in it, will be erased.
 5. We will name branches using templates defined in folder /templates
-6. Yo can never work on main branch
+6. You can never work on main branch
