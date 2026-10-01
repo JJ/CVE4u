@@ -12,7 +12,7 @@ Concretly, CVE4u works as a web platform that extracts the information (CVEs) qu
 ## Installation
 (Tutorial to install the product)
 ### Requirements
-(What is needed to run CVE4u on your OS)
+- Python 3.13.16 (pinned in `.python-version`, see [docs/python-version.md](docs/python-version.md))
 ### step by step
 
 ## Documentation
