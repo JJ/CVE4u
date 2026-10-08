@@ -1,9 +1,9 @@
 # CVE4u
 ## Introduction
-CVE4u is born as a solution for many spanish speakers who play CTFs(Capture The Flag), it provides a easy access platform to CVEs information (Common Vulnerabilities and Exposures) based on their personal needings.
+CVE4u is born as a solution for many Spanish speakers who play CTFs (Capture The Flag), it provides an easy access platform to CVEs information (Common Vulnerabilities and Exposures) based on their personal needs.
 
 ## Technical description
-Concretly, CVE4u works as a web platform that extracts the information (CVEs) quickly to make them accesible and updated for the users to finde them. 
+Concretely, CVE4u works as a web platform that extracts the information (CVEs) quickly to make them accessible and updated for the users to find them. 
 (Technical description without configuration details)
 
 ## Why to use it?

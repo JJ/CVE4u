@@ -3,8 +3,8 @@
 CVE4u uses **Python 3.13.16**.
 
 The version is pinned in the `.python-version` file at the root of the repository.
-This file is read automatically by version managers such as pyenv, pyenv-win and uv,
-and by GitHub Actions (`actions/setup-python` with `python-version-file`).
+This file is read automatically by uv, which the CI workflow uses to install Python,
+and by other version managers such as pyenv and pyenv-win.
 
 ## Why Python 3.13.16
 
