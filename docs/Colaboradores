@@ -6,3 +6,4 @@ AtlaasSD - Brayan Suárez Ceballos
 Gom01 - Flavien Gomez Donoso
 manuusnchz - Manuel Peñas Sánchez
 santiaguiyo - Santiago Díaz Sabio
+jjavier2005 - Javier de Jesús Cantalejo Caraballo
