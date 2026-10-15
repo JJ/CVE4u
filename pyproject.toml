@@ -1,7 +1,7 @@
 [project]
 name = "cve4u"
 version = "0.1.0"
-description = "Add your description here"
+description = "Plataforma web para encontrar CVEs relevantes en competiciones CTF"
 readme = "README.md"
 authors = [
     { name = "alvarodelcampoo", email = "alvarodelcampo@correo.ugr.es" }
