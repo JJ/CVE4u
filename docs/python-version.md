@@ -1,26 +1,25 @@
 # Python version
 
-CVE4u uses **Python 3.13.16**.
+CVE4u uses CPython from the 3.13 series. The exact version is pinned in the
+`.python-version` file at the root of the repository, which is the
+only place where it is defined.
 
-The version is pinned in the `.python-version` file at the root of the repository.
-This file is read automatically by uv, which the CI workflow uses to install Python,
-and by other version managers such as pyenv and pyenv-win.
+This file is read automatically by uv, and by other version managers such as pyenv and pyenv-win.
+pyproject.toml only restricts the series (`requires-python = ">=3.13,<3.14"`).
 
-## Why Python 3.13.16
+## Why the 3.13 series
 
-- It is the latest release of the 3.13 series (released 30 September 2026) and the
-  last one with official binary installers for Windows and macOS.
-- The 3.13 series is mature and widely supported by third-party libraries.
+- It is mature and widely supported by third-party libraries.
 - It will keep receiving security fixes until approximately October 2029 (PEP 719).
+- We pin the latest patch release of the series, which includes the latest bug and security fixes.
 
 ## How to check it
 
 ```bash
 python --version
-# Python 3.13.16
 ```
+The output must match the content of `.python-version`.
 
 ## References
 
-- https://www.python.org/downloads/release/python-31316/
 - https://peps.python.org/pep-0719/
