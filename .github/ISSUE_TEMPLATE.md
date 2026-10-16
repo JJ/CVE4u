@@ -1,12 +1,10 @@
-## Title
-<!-- Use a clear and concise title. -->
-<!-- Example: [Feature] Add a new option to the settings page -->
-<!-- Example: [Bug] Application crashes when input is empty -->
+<!-- Template for issue creation -->
+
+<!-- Title: describe the problem clearly and concisely, without prefixes such as [Bug] or [Feature]. -->
+<!-- Classify the issue with labels instead: bug, documentation, enhancement, user-stories... -->
+<!-- Example title: Application crashes when the search field is empty -->
 
 ## Description
-<!-- Explain clearly what needs to be done, or the problem you are experiencing. -->
-<!-- Example: Currently, users cannot perform X. We need to add Y so that Z is possible. -->
 
-### Context / Goal
-<!-- What is the purpose of this task or problem? -->
-
+<!-- Explain clearly the problem or what is missing. Describe it; the solution goes in the pull request. -->
+<!-- Example: When the search field is empty and the user presses Enter, the application crashes with a 500 error. -->

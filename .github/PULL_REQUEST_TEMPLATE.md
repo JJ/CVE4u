@@ -1,3 +1,5 @@
+<!-- Template for Pull Request creation -->
+
 ## Description
 <!-- Provide a brief explanation of what changes this PR introduces and why. -->
 <!-- Example: Add support for X to allow users to do Y. -->
@@ -10,6 +12,7 @@
 - [ ] Refactor / Code improvement
 
 ## Related Issue
-<!-- Link the issue resolved by this PR. Use 'Fixes #<issue_number>' or 'Closes #<issue_number>'. -->
-<!-- Example: Fixes #12 -->
-Fixes #
+<!-- Every pull request must reference the issue it solves with 'Closes #<issue_number>'. -->
+<!-- GitHub closes the issue automatically when the pull request is merged. -->
+<!-- Example: Closes #12 -->
+Closes #
