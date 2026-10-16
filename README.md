@@ -35,7 +35,8 @@ CVE4u/
 │   └── PULL_REQUEST_TEMPLATE.md  # Template for new pull requests
 ├── docs/                         # Project documentation
 │   ├── CONTRIBUTORS.md           # People who work on the project
-│   └── rules.md                  # Rules the team follows
+│   ├── rules.md                  # Rules the team follows
+│   └── workflows.md              # What each workflow does and how to test it
 ├── src/cve4u/                    # Source code of the cve4u package
 ├── tests/                        # Automated tests
 ├── .gitignore                    # Files Git does not track
@@ -48,6 +49,11 @@ CVE4u/
 ## Stack
 
 (Versions we are using and tools we have used too)
+
+## Workflows
+
+The repository uses GitHub Actions to automate tasks, such as publishing this website.
+See [docs/workflows.md](docs/workflows.md) for what each workflow does and how to test it.
 
 ## Contributions
 
