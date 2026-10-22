@@ -12,12 +12,12 @@ Concretely, CVE4u works as a web platform that extracts the information (CVEs) q
 ## Installation
 (Tutorial to install the product)
 ### Requirements
-- Python, with the exact version pinned in [`.pyhton-version`](.python-version) (see [docs/python-version.md](docs/python-version.md))
+- Python 3.13.
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Step by step
 1. Clone the repository.
-2. Run `uv sync`. uv installs the Python version pinned in `.python-version` and all the dependencies.
+2. Run `uv sync`. uv installs the Python version.
 
 ## Documentation
 (This will be information about the pages where we get the most of the information)
