@@ -1,12 +1,4 @@
-## Title
-<!-- Use a clear and concise title. -->
-<!-- Example: [Feature] Add a new option to the settings page -->
-<!-- Example: [Bug] Application crashes when input is empty -->
-
 ## Description
-<!-- Explain clearly what needs to be done, or the problem you are experiencing. -->
-<!-- Example: Currently, users cannot perform X. We need to add Y so that Z is possible. -->
-
-### Context / Goal
-<!-- What is the purpose of this task or problem? -->
-
+<!-- Describe the problem: what is wrong or missing, where it happens and why it matters. -->
+<!-- Do not propose a solution here; it is discussed in the comments and solved in the pull request. -->
+<!-- Example: A player who only knows the software name cannot tell which CVEs affect it, because every CVE has to be checked by hand. -->
