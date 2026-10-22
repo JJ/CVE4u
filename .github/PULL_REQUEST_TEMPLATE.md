@@ -10,6 +10,5 @@
 - [ ] Refactor / Code improvement
 
 ## Related Issue
-<!-- Link the issue resolved by this PR. Use 'Fixes #<issue_number>' or 'Closes #<issue_number>'. -->
-<!-- Example: Fixes #12 -->
-Fixes #
+<!-- Every pull request must solve one issue. Link it with `Closes #<issue_number>` so it is closed when the pull request is merged. -->
+Closes #
