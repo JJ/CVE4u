@@ -30,7 +30,6 @@ CVE4u/
 │   ├── workflows/
 │   │   ├── jekyll-gh-pages.yml   # Builds this README into the website and publishes it
 │   │   └── python-CI.yml         # Lints and tests the Python code on every pull request
-│   ├── CODEOWNERS                # Code owners, requested as reviewers on every pull request
 │   ├── ISSUE_TEMPLATE.md         # Template for new issues
 │   └── PULL_REQUEST_TEMPLATE.md  # Template for new pull requests
 ├── docs/                         # Project documentation
