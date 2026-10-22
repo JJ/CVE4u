@@ -17,7 +17,6 @@ Concretely, CVE4u works as a web platform that extracts the information (CVEs) q
 ### Step by step
 1. Clone the repository.
 2. Run `uv sync`.
-
 ## Documentation
 (This will be information about the pages where we get the most of the information)
 
