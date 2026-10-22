@@ -6,10 +6,10 @@ The rest depend on everyone following them and on the reviewers.
 
 1. Every pull request needs at least 2 approvals. *(enforced by GitHub)*
 2. At least one of those approvals must come from a code owner: `diego-vigil-sosa`, `Carlitros20` or `jjavier2005`.
-   They are listed in [CODEOWNERS](https://github.com/JJ/CVE4u/blob/main/.github/CODEOWNERS). *(enforced by GitHub)*
+   They are listed in [CODEOWNERS](https://github.com/JJ/CVE4u/blob/main/.github/CODEOWNERS).
 3. Pushing new commits to a pull request dismisses its previous approvals. *(enforced by GitHub)*
-4. A pull request can only be merged when all CI checks pass. *(enforced by GitHub)*
-5. Before merging, the branch must be up to date with `main`. *(enforced by GitHub)*
+4. A pull request can only be merged when all CI checks pass.
+5. Before merging, the branch must be up to date with `main`.
 6. You can never work on main branch. Changes reach `main` only through pull requests. *(enforced by GitHub)*
 7. `main` cannot be deleted or force-pushed. *(enforced by GitHub)*
 8. Each branch solves one issue and is named `<type>/<issue-number>-<short-description>`, in lowercase with words separated by hyphens.
