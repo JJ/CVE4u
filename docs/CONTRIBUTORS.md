@@ -1,7 +1,7 @@
 # Contributors
 
 | GitHub user | Name |
-|---|---|
+| --- | --- |
 | Javiride22 | Javier Rivera Delgado |
 | alvarodelcampoo | Álvaro Del Campo Masegosa |
 | Petaka41 | Daniel Ruiz Losada |
@@ -11,3 +11,4 @@
 | manuusnchz | Manuel Peñas Sánchez |
 | santiaguiyo | Santiago Díaz Sabio |
 | jjavier2005 | Javier de Jesús Cantalejo Caraballo |
+| diego-vigil-sosa | Diego Vigil Sosa |

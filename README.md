@@ -2,16 +2,17 @@
 
 ## Introduction
 
-CVE4u is born as a solution for many Spanish speakers who play CTFs (Capture The Flag), it provides an easy access platform to CVEs information (Common Vulnerabilities and Exposures) based on their personal needs.
+CVE4u is born as a solution for many Spanish speakers who play CTFs
+(Capture The Flag). It provides an easy access platform to CVE
+(Common Vulnerabilities and Exposures) information based on their
+personal needs.
 
 ## Technical description
 
-Concretely, CVE4u works as a web platform that extracts the information (CVEs) quickly to make them accessible and updated for the users to find them.
-(Technical description without configuration details)
+CVE4u works as a web platform that extracts CVE information quickly,
+to keep it accessible and up to date for users.
 
 ## Installation
-
-(Tutorial to install the product)
 
 ### Requirements
 
@@ -47,7 +48,15 @@ CVE4u/
 
 ## Stack
 
-(Versions we are using and tools we have used too)
+| Tool | Use |
+| --- | --- |
+| [Python](https://www.python.org/) | Programming language |
+| [uv](https://docs.astral.sh/uv/) | Dependency and environment manager |
+| [ruff](https://docs.astral.sh/ruff/) | Linter |
+| [pytest](https://docs.pytest.org/) | Test framework |
+
+Supported versions are defined in `pyproject.toml`,
+and the exact versions in `uv.lock`.
 
 ## Workflows
 
@@ -56,4 +65,5 @@ See [docs/workflows.md](docs/workflows.md) for what each workflow does and how t
 
 ## Contributions
 
-Check out [CONTRIBUTORS.md](docs/CONTRIBUTORS.md) to see the developers that worked on this project.
+Please read the [project rules](docs/rules.md) before contributing.
+The list of contributors is in [CONTRIBUTORS.md](docs/CONTRIBUTORS.md).
