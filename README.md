@@ -1,6 +1,5 @@
 # CVE4u
 
-
 ## Introduction
 
 CVE4u is born as a solution for many Spanish speakers who play CTFs
@@ -17,26 +16,12 @@ to keep it accessible and up to date for users.
 
 ### Requirements
 
-
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Step by step
 
-
 1. Clone the repository.
 2. Run `uv sync`.
-
-## Project structure
-
-| Path | Content |
-| --- | --- |
-| `.github/` | Issue and pull request templates, code owners and CI workflows |
-| `docs/` | Project rules and list of contributors |
-| `src/cve4u/` | Source code of the application |
-| `tests/` | Automated tests, run with pytest |
-| `pyproject.toml` | Project metadata, dependencies and ruff configuration |
-| `uv.lock` | Exact versions of the dependencies, managed by uv |
-| `LICENSE` | AGPL-3.0 license |
 
 ## Structure
 
@@ -66,8 +51,6 @@ CVE4u/
 (Versions we are using and tools we have used too)
 
 ## Contributions
-
-Check out [CONTRIBUTORS.md](docs/CONTRIBUTORS.md) to see the developers that worked on this project.
 
 Please read the [project rules](docs/rules.md) before contributing.
 The list of contributors is in [CONTRIBUTORS.md](docs/CONTRIBUTORS.md).
