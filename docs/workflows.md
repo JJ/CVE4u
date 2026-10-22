@@ -30,6 +30,28 @@ uv run ruff check .
 uv run pytest
 ```
 
+## Markdown lint
+
+File: [`markdown-lint.yml`](https://github.com/JJ/CVE4u/blob/main/.github/workflows/markdown-lint.yml)
+
+Checks the format of every Markdown file, so errors no longer depend on who has the editor extension installed.
+
+- **When it runs:** on every pull request to `main` and on every push to `main`.
+- **`markdownlint` job:** runs [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) on every `.md` file.
+- The rules are in `.markdownlint-cli2.jsonc`, which the VS Code markdownlint extension also reads,
+  so the editor and the CI show the same warnings.
+- It fails if any Markdown file breaks a rule.
+
+### How to run it locally
+
+Run it from the root of the repository. It needs [Node.js](https://nodejs.org/):
+
+```bash
+npx markdownlint-cli2
+```
+
+Add `--fix` to correct the errors that can be fixed automatically.
+
 ## Deploy GitHub Pages
 
 File: [`jekyll-gh-pages.yml`](https://github.com/JJ/CVE4u/blob/main/.github/workflows/jekyll-gh-pages.yml)

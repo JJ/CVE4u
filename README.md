@@ -30,6 +30,7 @@ CVE4u/
 ├── .github/
 │   ├── workflows/
 │   │   ├── jekyll-gh-pages.yml   # Builds this README into the website and publishes it
+│   │   ├── markdown-lint.yml     # Checks the format of the Markdown files on every pull request
 │   │   └── python-CI.yml         # Lints and tests the Python code on every pull request
 │   ├── ISSUE_TEMPLATE.md         # Template for new issues
 │   └── PULL_REQUEST_TEMPLATE.md  # Template for new pull requests
@@ -40,6 +41,7 @@ CVE4u/
 ├── src/cve4u/                    # Source code of the cve4u package
 ├── tests/                        # Automated tests
 ├── .gitignore                    # Files Git does not track
+├── .markdownlint-cli2.jsonc      # markdownlint rules, shared by the CI and the editor
 ├── LICENSE                       # AGPL-3.0 license
 ├── README.md                     # This file, also the website's home page
 ├── pyproject.toml                # Project metadata, supported Python versions, dependencies and ruff settings
@@ -53,6 +55,7 @@ CVE4u/
 | [Python](https://www.python.org/) | Programming language |
 | [uv](https://docs.astral.sh/uv/) | Dependency and environment manager |
 | [ruff](https://docs.astral.sh/ruff/) | Linter |
+| [markdownlint](https://github.com/DavidAnson/markdownlint-cli2) | Markdown linter |
 | [pytest](https://docs.pytest.org/) | Test framework |
 
 Supported versions are defined in `pyproject.toml`,
