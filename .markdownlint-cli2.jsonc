@@ -1,0 +1,13 @@
+{
+  "config": {
+    "default": true,
+    // MD013 (line length) is disabled: prose paragraphs are written in a single line.
+    "MD013": false,
+    // MD041 (first line must be an H1) is disabled: the issue and PR templates are fragments, not documents.
+    "MD041": false,
+    // MD024 (duplicate headings) only applies to siblings: every workflow in docs/workflows.md has the same subsections.
+    "MD024": { "siblings_only": true }
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules", ".venv"]
+}
