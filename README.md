@@ -48,7 +48,15 @@ CVE4u/
 
 ## Stack
 
-(Versions we are using and tools we have used too)
+| Tool | Use |
+| --- | --- |
+| [Python](https://www.python.org/) | Programming language |
+| [uv](https://docs.astral.sh/uv/) | Dependency and environment manager |
+| [ruff](https://docs.astral.sh/ruff/) | Linter |
+| [pytest](https://docs.pytest.org/) | Test framework |
+
+Supported versions are defined in `pyproject.toml`,
+and the exact versions in `uv.lock`.
 
 ## Contributions
 
