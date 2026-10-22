@@ -16,10 +16,6 @@ dev = [
     "ruff>=0.17.0",
 ]
 
-[tool.ruff]
-line-length = 88
-indent-width = 4
-
 [tool.ruff.lint]
 select = [
     "E",   # pycodestyle errors (PEP 8)
@@ -31,14 +27,5 @@ select = [
     "S",   # flake8-bandit (security static analysis)
 ]
 
-ignore = []
-fixable = ["ALL"]
-unfixable = []
-
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*.py" = ["S101"]
-
-[tool.ruff.format]
-quote-style = "double"
-indent-style = "space"
-line-ending = "auto"
