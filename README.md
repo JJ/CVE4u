@@ -1,26 +1,42 @@
 # CVE4u
 
+
 ## Introduction
 
-CVE4u is born as a solution for many Spanish speakers who play CTFs (Capture The Flag), it provides an easy access platform to CVEs information (Common Vulnerabilities and Exposures) based on their personal needs.
+CVE4u is born as a solution for many Spanish speakers who play CTFs
+(Capture The Flag). It provides an easy access platform to CVE
+(Common Vulnerabilities and Exposures) information based on their
+personal needs.
 
 ## Technical description
 
-Concretely, CVE4u works as a web platform that extracts the information (CVEs) quickly to make them accessible and updated for the users to find them.
-(Technical description without configuration details)
+CVE4u works as a web platform that extracts CVE information quickly,
+to keep it accessible and up to date for users.
 
 ## Installation
 
-(Tutorial to install the product)
-
 ### Requirements
+
 
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Step by step
 
+
 1. Clone the repository.
 2. Run `uv sync`.
+
+## Project structure
+
+| Path | Content |
+| --- | --- |
+| `.github/` | Issue and pull request templates, code owners and CI workflows |
+| `docs/` | Project rules and list of contributors |
+| `src/cve4u/` | Source code of the application |
+| `tests/` | Automated tests, run with pytest |
+| `pyproject.toml` | Project metadata, dependencies and ruff configuration |
+| `uv.lock` | Exact versions of the dependencies, managed by uv |
+| `LICENSE` | AGPL-3.0 license |
 
 ## Structure
 
@@ -52,3 +68,6 @@ CVE4u/
 ## Contributions
 
 Check out [CONTRIBUTORS.md](docs/CONTRIBUTORS.md) to see the developers that worked on this project.
+
+Please read the [project rules](docs/rules.md) before contributing.
+The list of contributors is in [CONTRIBUTORS.md](docs/CONTRIBUTORS.md).
