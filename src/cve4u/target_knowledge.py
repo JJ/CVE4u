@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from product import Product
 
 
 @dataclass(frozen=True,slots=True,kw_only=True)
