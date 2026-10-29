@@ -7,11 +7,20 @@ class Version:
     numbers: tuple[int, ...] = field(init=False)
 
     def __post_init__(self) -> None:
-        pieces = self.text.split(".")
-        if not all(piece.isdecimal() for piece in pieces):
-            raise ValueError(f"Version must only contain numbers and dots: {self.text}")
+        cleaned_pieces = []
+        for piece in self.text.split("."):
+            if piece == "*":
+                cleaned_pieces.append("0")
+            elif piece.isdecimal():
+                cleaned_pieces.append(piece)
+            else:
+                digits = "".join(filter(str.isdigit, piece))
+                if digits:
+                    cleaned_pieces.append(digits)
+                else:
+                    break
 
-        numbers = [int(piece) for piece in pieces]
+        numbers = [int(piece) for piece in cleaned_pieces] if cleaned_pieces else [0]
         while len(numbers) > 1 and numbers[-1] == 0:
             numbers.pop()
 
