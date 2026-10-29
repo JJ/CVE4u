@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from product import Product
+from cve4u.product import Product
 
 
 @dataclass(frozen=True,slots=True,kw_only=True)
