@@ -1,8 +1,7 @@
-from dataclasses import dataclass, field
+from pydantic import BaseModel, ConfigDict
 
-
-@dataclass(frozen=True, order=True)
-class Version:
+model_config = ConfigDict(frozen=True)
+class Version(BaseModel):
     text: str = field(compare=False)
     numbers: tuple[int, ...] = field(init=False)
 

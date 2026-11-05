@@ -1,10 +1,10 @@
-from dataclasses import dataclass
+from pydantic import BaseModel, ConfigDict
 
 from cve4u.version import Version
 
 
-@dataclass(frozen=True)
-class VersionRange:
+model_config = ConfigDict(frozen=True)
+class VersionRange(BaseModel):
     start: Version | None = None
     end: Version | None = None
     start_included: bool = True
