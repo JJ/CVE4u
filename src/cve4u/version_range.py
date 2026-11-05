@@ -9,4 +9,4 @@ class VersionRange:
     end: Version | None = None
     start_included: bool = True
     end_included: bool = False
-    
+
