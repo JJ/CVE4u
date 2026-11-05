@@ -2,7 +2,6 @@ from pydantic import BaseModel, ConfigDict
 
 from cve4u.version import Version
 
-
 model_config = ConfigDict(frozen=True)
 class VersionRange(BaseModel):
     start: Version | None = None
