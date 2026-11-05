@@ -19,7 +19,8 @@ class VersionRange(BaseModel):
         if self.start is not None and self.end is not None:
             if self.start > self.end:
                 raise ValueError("The start of a version range must be before its end")
-            if self.start == self.end and not (self.start_included and self.end_included):
+            if self.start == self.end and \
+            not (self.start_included and self.end_included):
                 raise ValueError("A version range must contain at least one version")
 
         return self
