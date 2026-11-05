@@ -1,11 +1,14 @@
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-model_config = ConfigDict(frozen=True)
+
 class Version(BaseModel):
-    text: str = field(compare=False)
-    numbers: tuple[int, ...] = field(init=False)
+    model_config = ConfigDict(frozen=True)
 
-    def __post_init__(self) -> None:
+    text: str = Field(compare=False)
+    numbers: tuple[int, ...] = Field(init=False)
+
+    @model_validator(mode="after")
+    def validate_version(self):
         pieces = self.text.split(".")
         if not all(piece.isdecimal() for piece in pieces):
             raise ValueError(f"Version must only contain numbers and dots: {self.text}")
