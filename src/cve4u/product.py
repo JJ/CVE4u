@@ -1,7 +1,8 @@
-from dataclasses import dataclass
+from pydantic import BaseModel, ConfigDict
 
 
-@dataclass(frozen=True)
-class Product:
+class Product(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     vendor: str
     name: str
