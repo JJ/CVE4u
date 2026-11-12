@@ -1,8 +1,7 @@
-from dataclasses import dataclass
+from pydantic import BaseModel, ConfigDict
 
 
-@dataclass(frozen=True, order=True)
-class Version:
-    major: int
-    minor: int
-    patch: int
+class Version(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
+    text: str

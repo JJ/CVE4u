@@ -23,6 +23,6 @@ The rest depend on everyone following them and on the reviewers.
    Examples: `fix/67-pages-node-deprecation`, `docs/63-python-version-ssot`.
 8. When a pull request is accepted, the branch used for working in it, will be erased.
 9. Language used in all documents must be English. Issues and pull requests are not documents.
-10. Issues and pull requests must follow their templates: [issue template](https://github.com/JJ/CVE4u/blob/main/.github/ISSUE_TEMPLATE.md) and [pull request template](https://github.com/JJ/CVE4u/blob/main/.github/PULL_REQUEST_TEMPLATE.md).
+10. Issues and pull requests must follow their templates: [issue template](https://github.com/JJ/CVE4u/blob/main/.github/ISSUE_TEMPLATE/ISSUE_TEMPLATE.md) and [pull request template](https://github.com/JJ/CVE4u/blob/main/.github/PULL_REQUEST_TEMPLATE.md).
 11. Issues and pull requests are classified with labels (`bug`, `documentation`, `enhancement`, `user-stories`...), never with title prefixes such as `[Bug]` or `[Feature]`.
 12. Commit messages are written in English, in the imperative mood ("Add...", "Fix...", not "Added..." or "Fixes..."), with a short first line that summarizes the change.

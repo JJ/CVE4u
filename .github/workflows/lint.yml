@@ -1,4 +1,4 @@
-name: Python CI
+name: Lint
 
 on:
   push:
@@ -10,21 +10,18 @@ permissions:
   contents: read
 
 jobs:
-  lint-and-test:
-    name: Lint (ruff) and tests (pytest)
+  ruff:
+    name: Lint (ruff)
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v7
 
-      - name: Install uv
+      - name: Install uv for linting
         uses: astral-sh/setup-uv@v7
 
-      - name: Install Python and dependencies
+      - name: Install Python and its dependencies
         run: uv sync --locked
 
-      - name: Run linter (ruff)
+      - name: Run linter (we're currently using Ruff)
         run: uv run ruff check .
-
-      - name: Run tests (pytest)
-        run: uv run pytest || [ $? -eq 5 ]

@@ -4,31 +4,52 @@ CVE4u uses [GitHub Actions](https://docs.github.com/en/actions) to automate task
 The workflows live in [`.github/workflows/`](https://github.com/JJ/CVE4u/tree/main/.github/workflows),
 and their runs are listed in the [Actions tab](https://github.com/JJ/CVE4u/actions).
 
-## Python CI
+## Lint
 
-File: [`python-CI.yml`](https://github.com/JJ/CVE4u/blob/main/.github/workflows/python-CI.yml)
+File: [`lint.yml`](https://github.com/JJ/CVE4u/blob/main/.github/workflows/lint.yml)
 
-Checks the Python code on every change, so problems are found before they reach `main`.
+Checks the style and common errors of the Python code on every change, so problems are found before they reach `main`.
 
 - **When it runs:** on every pull request to `main` and on every push to `main`.
-- **`lint-and-test` job:** installs uv, runs `uv sync --locked` to install Python and the dependencies from `uv.lock`,
-  runs the linter (`ruff check .`) and then the tests (`pytest`).
-- It fails if `uv.lock` is out of date, if ruff finds a problem or if a test fails.
-  Having no tests yet is not a failure.
+- **`ruff` job:** installs uv, runs `uv sync --locked` to install Python and the dependencies from `uv.lock`,
+  and then runs the linter (`ruff check .`).
+- It fails if `uv.lock` is out of date or if ruff finds a problem.
 
-### How to check it
-
-The result appears at the bottom of every pull request, next to the merge button, and in the [Actions tab](https://github.com/JJ/CVE4u/actions).
-
-### How to run it locally
+### How to run the linter locally
 
 Run the same steps from the root of the repository:
 
 ```bash
 uv sync --locked
 uv run ruff check .
+```
+
+## Tests
+
+File: [`tests.yml`](https://github.com/JJ/CVE4u/blob/main/.github/workflows/tests.yml)
+
+Runs the tests on every change, so a broken feature is found before it reaches `main`.
+
+- **When it runs:** on every pull request to `main` and on every push to `main`.
+- **`pytest` job:** installs uv, runs `uv sync --locked` to install Python and the dependencies from `uv.lock`,
+  and then runs the tests (`pytest`).
+- It fails if `uv.lock` is out of date or if a test fails.
+  Having no tests yet is not a failure.
+
+### How to run the tests locally
+
+Run the same steps from the root of the repository:
+
+```bash
+uv sync --locked
 uv run pytest
 ```
+
+### How to check the Lint and Tests results
+
+Each workflow appears as a separate check at the bottom of every pull request, next to the merge button,
+and in the [Actions tab](https://github.com/JJ/CVE4u/actions).
+If one of them fails, its name tells whether the problem is in the style of the code or in a test.
 
 ## Markdown lint
 

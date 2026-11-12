@@ -1,11 +1,12 @@
-from dataclasses import dataclass
+from pydantic import BaseModel, ConfigDict
 
 from cve4u.product import Product
 from cve4u.version import Version
 
 
-@dataclass(frozen=True,slots=True,kw_only=True)
-class TargetKnowledge:
+class TargetKnowledge(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     os: str | None = None
     product: Product | None = None
     version: Version | None = None
