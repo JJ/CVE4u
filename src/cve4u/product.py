@@ -1,6 +1,7 @@
 from pydantic import BaseModel, ConfigDict
 
-model_config = ConfigDict(frozen=True)
 class Product(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    
     vendor: str
     name: str
