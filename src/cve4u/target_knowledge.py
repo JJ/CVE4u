@@ -1,6 +1,7 @@
 from pydantic import BaseModel, ConfigDict
 
 from cve4u.product import Product
+from cve4u.version import Version
 
 
 class TargetKnowledge(BaseModel):
@@ -8,4 +9,4 @@ class TargetKnowledge(BaseModel):
 
     os: str | None = None
     product: Product | None = None
-    version: str | None = None
+    version: Version | None = None
