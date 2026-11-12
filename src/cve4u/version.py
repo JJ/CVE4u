@@ -1,20 +1,20 @@
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from functools import total_ordering
+
+from pydantic import BaseModel, ConfigDict, computed_field
 
 
+@total_ordering
 class Version(BaseModel):
     model_config = ConfigDict(frozen=True)
 
-    text: str = Field(compare=False)
-    numbers: tuple[int, ...] = Field(init=False)
+    text: str
 
-    @model_validator(mode="after")
-    def validate_version(self):
-        pieces = self.text.split(".")
-        if not all(piece.isdecimal() for piece in pieces):
-            raise ValueError(f"Version must only contain numbers and dots: {self.text}")
+    @computed_field
+    @property
+    def numbers(self) -> tuple[int, ...]:
+        return tuple(int(p) for p in self.text.split(".") if p.isdigit())
 
-        numbers = [int(piece) for piece in pieces]
-        while len(numbers) > 1 and numbers[-1] == 0:
-            numbers.pop()
-
-        object.__setattr__(self, "numbers", tuple(numbers))
+    def __lt__(self, other: "Version") -> bool:
+        if not isinstance(other, Version):
+            return NotImplemented
+        return self.numbers < other.numbers
