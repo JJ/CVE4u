@@ -6,4 +6,3 @@ class Software(BaseModel):
 
     vendor: str
     product: str
-    platforms: tuple[str, ...] = ()
