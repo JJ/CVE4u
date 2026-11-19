@@ -1,8 +1,9 @@
 from pydantic import BaseModel, ConfigDict
 
 
-class Product(BaseModel):
+class Software(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     vendor: str
-    name: str
+    product: str
+    platforms: tuple[str, ...] = ()
