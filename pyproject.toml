@@ -35,4 +35,5 @@ select = [
 
 [tool.poe.tasks]
 lint = "ruff check ."
+lint-md = { shell = "npx --yes markdownlint-cli2@0.23.2", interpreter = ["posix", "pwsh", "powershell"] }
 test = "pytest"
