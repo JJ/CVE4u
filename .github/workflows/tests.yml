@@ -23,8 +23,5 @@ jobs:
       - name: Install Python and its dependencies
         run: uv sync --locked
 
-      - name: Run tests with pytest
-        run: uv run pytest || [ $? -eq 5 ]
-
       - name: Run the test task
         run: uv run poe test || [ $? -eq 5 ]

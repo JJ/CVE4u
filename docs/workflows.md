@@ -12,7 +12,7 @@ Checks the style and common errors of the Python code on every change, so proble
 
 - **When it runs:** on every pull request to `main` and on every push to `main`.
 - **`ruff` job:** installs uv, runs `uv sync --locked` to install Python and the dependencies from `uv.lock`,
-  and then runs thelint task (uv run poe lint), which calls ruff.
+  and then runs the `lint` task (`uv run poe lint`), which calls ruff.
 - It fails if `uv.lock` is out of date or if ruff finds a problem.
 
 ### How to run the linter locally
@@ -21,7 +21,7 @@ Run the same steps from the root of the repository:
 
 ```bash
 uv sync --locked
-uv run poe lint .
+uv run poe lint 
 ```
 
 ## Tests
@@ -32,7 +32,7 @@ Runs the tests on every change, so a broken feature is found before it reaches `
 
 - **When it runs:** on every pull request to `main` and on every push to `main`.
 - **`pytest` job:** installs uv, runs `uv sync --locked` to install Python and the dependencies from `uv.lock`,
-  and then runs thetest task (uv run poe test), which calls pytest.
+  and then runs the `test` task (`uv run poe test`), which calls pytest.
 - It fails if `uv.lock` is out of date or if a test fails.
   Having no tests yet is not a failure.
 
