@@ -1,8 +1,11 @@
-from dataclasses import dataclass
+from pydantic import BaseModel, ConfigDict
+
+from cve4u.software import Software
 
 
-@dataclass(eq=False)
-class CVE:
-    _id: str
-    _descriptions: str
-    _title: str | None = None
+class CVE(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
+    title: str | None = None
+    description: str
+    affected: tuple[Software, ...]
