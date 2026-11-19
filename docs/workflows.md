@@ -21,7 +21,7 @@ Run the same steps from the root of the repository:
 
 ```bash
 uv sync --locked
-uv run poe lint 
+uv run poe lint
 ```
 
 ## Tests
