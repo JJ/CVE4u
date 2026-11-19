@@ -17,5 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Run markdownlint
-        uses: DavidAnson/markdownlint-cli2-action@v24
+      - name: Install uv for linting
+        uses: astral-sh/setup-uv@v7
+
+      - name: Install Python and its dependencies
+        run: uv sync --locked
+
+      - name: Run the lint-md task
+        run: uv run poe lint-md

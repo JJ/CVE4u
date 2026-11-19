@@ -12,7 +12,7 @@ Checks the style and common errors of the Python code on every change, so proble
 
 - **When it runs:** on every pull request to `main` and on every push to `main`.
 - **`ruff` job:** installs uv, runs `uv sync --locked` to install Python and the dependencies from `uv.lock`,
-  and then runs the linter (`ruff check .`).
+  and then runs the `lint` task (`uv run poe lint`), which calls ruff.
 - It fails if `uv.lock` is out of date or if ruff finds a problem.
 
 ### How to run the linter locally
@@ -21,7 +21,7 @@ Run the same steps from the root of the repository:
 
 ```bash
 uv sync --locked
-uv run ruff check .
+uv run poe lint
 ```
 
 ## Tests
@@ -32,7 +32,7 @@ Runs the tests on every change, so a broken feature is found before it reaches `
 
 - **When it runs:** on every pull request to `main` and on every push to `main`.
 - **`pytest` job:** installs uv, runs `uv sync --locked` to install Python and the dependencies from `uv.lock`,
-  and then runs the tests (`pytest`).
+  and then runs the `test` task (`uv run poe test`), which calls pytest.
 - It fails if `uv.lock` is out of date or if a test fails.
   Having no tests yet is not a failure.
 
@@ -42,7 +42,7 @@ Run the same steps from the root of the repository:
 
 ```bash
 uv sync --locked
-uv run pytest
+uv run poe test
 ```
 
 ### How to check the Lint and Tests results
@@ -58,7 +58,7 @@ File: [`markdown-lint.yml`](https://github.com/JJ/CVE4u/blob/main/.github/workfl
 Checks the format of every Markdown file, so errors no longer depend on who has the editor extension installed.
 
 - **When it runs:** on every pull request to `main` and on every push to `main`.
-- **`markdownlint` job:** runs [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) on every `.md` file.
+- **`markdownlint` job:** installs uv, runs `uv sync --locked`, and then runs the `lint-md` task (`uv run poe lint-md`), which calls [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) on every `.md` file.
 - The rules are in `.markdownlint-cli2.jsonc`, which the VS Code markdownlint extension also reads,
   so the editor and the CI show the same warnings.
 - It fails if any Markdown file breaks a rule.
@@ -68,10 +68,10 @@ Checks the format of every Markdown file, so errors no longer depend on who has 
 Run it from the root of the repository. It needs [Node.js](https://nodejs.org/):
 
 ```bash
-npx markdownlint-cli2
+uv run poe lint-md
 ```
 
-Add `--fix` to correct the errors that can be fixed automatically.
+To correct the errors that can be fixed automatically, run `npx markdownlint-cli2@0.23.2 --fix`.
 
 ## Deploy GitHub Pages
 

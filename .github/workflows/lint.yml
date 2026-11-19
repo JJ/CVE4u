@@ -23,5 +23,5 @@ jobs:
       - name: Install Python and its dependencies
         run: uv sync --locked
 
-      - name: Run linter (we're currently using Ruff)
-        run: uv run ruff check .
+      - name: Run the lint task
+        run: uv run poe lint
