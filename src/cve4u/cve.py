@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict, Field
 
-from cve4u.software import Software
+from cve4u.affected_product import AffectedProduct
 
 
 class CVE(BaseModel):
@@ -9,4 +9,4 @@ class CVE(BaseModel):
     id: str = Field(pattern=r"^CVE-[0-9]{4}-[0-9]{4,19}$")
     title: str | None = None
     description: str
-    affected: tuple[Software, ...]
+    affected: tuple[AffectedProduct, ...]
