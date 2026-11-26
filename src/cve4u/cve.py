@@ -12,3 +12,6 @@ class CVE(BaseModel):
     description: str
     affected: tuple[Software, ...]
     cvss_scores: tuple[CvssScore, ...] = ()
+
+    def matches_product(self, name: str) -> bool:
+        return any(software.matches_name(name) for software in self.affected)
