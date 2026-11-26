@@ -1,5 +1,6 @@
 from pydantic import BaseModel, ConfigDict
 
+from cve4u.status import Status
 from cve4u.version import Version
 
 
@@ -10,3 +11,4 @@ class VersionRange(BaseModel):
     end: Version | None = None
     start_included: bool = True
     end_included: bool = False
+    status: Status
