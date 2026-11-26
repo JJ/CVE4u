@@ -10,3 +10,6 @@ class CVE(BaseModel):
     title: str | None = None
     description: str
     affected: tuple[Software, ...]
+
+    def matches_product(self, name: str) -> bool:
+        return any(software.matches_name(name) for software in self.affected)
