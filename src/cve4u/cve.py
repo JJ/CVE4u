@@ -1,5 +1,6 @@
 from pydantic import BaseModel, ConfigDict, Field
 
+from cve4u.cvss_score import CvssScore
 from cve4u.software import Software
 
 
@@ -10,3 +11,4 @@ class CVE(BaseModel):
     title: str | None = None
     description: str
     affected: tuple[Software, ...]
+    cvss_scores: tuple[CvssScore, ...] = ()
